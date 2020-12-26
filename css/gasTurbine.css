@@ -1,0 +1,77 @@
+body{
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color: #2d2e2e;
+    color: #d8e5f3;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+sup{
+    vertical-align: super;
+}
+sub{
+    vertical-align: sub;
+}
+header h3{
+    margin: 10px 0;
+}
+header a{
+    text-decoration: underline;
+    color:inherit;
+}
+#inputs, .assumptions{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.labelAndInput, .inputGrouping{
+    margin: 0.5rem 1rem;
+    /* max-width: 15rem; */
+    padding: 1rem 1rem;
+    background: #2d2e2e;
+    box-shadow:  5px 5px 10px #262727, 
+                 -5px -5px 10px #343535;
+    border-radius: 1rem;
+    flex-grow: 1;
+}
+.labelAndInput input{
+    margin: 20px 0;
+    padding: 10px;
+    background: #d8e5f3;
+    box-shadow: inset 5px 5px 10px #b8c3cf, 
+                inset -5px -5px 10px #f8ffff;
+    border: none;
+    border-radius: 0.4rem;
+    display: block;
+}
+.inputGrouping .labelAndInput{
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+button{
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background: #20dc9d;
+    box-shadow:  5px 5px 10px #262727, 
+                 -5px -5px 10px #343535;
+    font-size: 1.2rem;
+}
+button:hover{
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+}
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Generator Design Calculator</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/gasTurbine.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gas Generator Design Calculator</h1>
+        <h3>Created by <a href="https://www.linkedin.com/in/sagarshahuk/">Sagar</a></h3>
+        <p>Units: Pressures in Pa, Temperatures in K, C<sub>pa/pg</sub> in J/kg, &#7745; in kg/s and C<sub>a</sub> in
+            m/s.</p>
+    </header>
+    <form id="gasTurbineForm">
+        <div id="inputs">
+            <div class="labelAndInput">
+                <label>P<sub>02</sub> &frasl; P<sub>01</sub></label>
+                <input type="number" name="P_02/P_01" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">P<sub>04</sub> &frasl; P<sub>03</sub></label>
+                <input type="number" name="P_04/P_03" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">P<sub>02</sub>-P<sub>03</sub> </label>
+                <input type="number" name="P_02-P_03" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">T<sub>021</sub></label>
+                <input type="number" name="T_021" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">T<sub>034</sub></label>
+                <input type="number" name="T_034" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">&eta;<sub>m</sub></label>
+                <input type="number" name="eta_m" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">&eta;<sub>c</sub></label>
+                <input type="number" name="eta_c" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">&eta;<sub>t</sub></label>
+                <input type="number" name="eta_t" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">C<sub>pa</sub></label>
+                <input type="number" name="C_pa" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">C<sub>pg</sub></label>
+                <input type="number" name="C_pg" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">&gamma;<sub>a</sub> (adiabatic index air)</label>
+                <input type="number" name="gamma_a" id="" value=1.4 step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">&gamma;<sub>g</sub> (adiabatic index gas)</label>
+                <input type="number" name="gamma_g" id="" value=1.33 step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">T<sub>03</sub>/T<sub>01</sub></label>
+                <input type="number" name="T_03/T_01" id="" step="any">
+            </div>
+            <div class="inputGrouping">
+                <div class="labelAndInput">
+                    <label for="">P<sub>0a</sub></label>
+                    <input type="number" name="P_0a" id="" step="any">
+                </div>
+                <div class="labelAndInput">
+                    <label for="">T<sub>0a</sub></label>
+                    <input type="number" name="T_0a" id="" step="any">
+                </div>
+            </div>
+            <div class="labelAndInput">
+                <label for="">&#7745;</label>
+                <input type="number" name="m-dot" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">C<sub>a</sub></label>
+                <input type="number" name="C_a" id="" step="any">
+            </div>
+            <div class="inputGrouping">
+                <div class="labelAndInput">
+                    <label for="">P<sub>01</sub></label>
+                    <input type="number" name="P_01" id="" step="any">
+                </div>
+                <div class="labelAndInput">
+                    <label for="">T<sub>01</sub></label>
+                    <input type="number" name="T_01" id="" step="any">
+                </div>
+            </div>
+            <div class="inputGrouping">
+                <div class="labelAndInput">
+                    <label for="">P<sub>02</sub></label>
+                    <input type="number" name="P_02" id="" step="any">
+                </div>
+                <div class="labelAndInput">
+                    <label for="">T<sub>02</sub></label>
+                    <input type="number" name="T_02" id="" step="any">
+                </div>
+            </div>
+            <div class="inputGrouping">
+                <div class="labelAndInput">
+                    <label for="">P<sub>03</sub></label>
+                    <input type="number" name="P_03" id="" step="any">
+                </div>
+                <div class="labelAndInput">
+                    <label for="">T<sub>03</sub></label>
+                    <input type="number" name="T_03" id="" step="any">
+                </div>
+            </div>
+            <div class="inputGrouping">
+                <div class="labelAndInput">
+                    <label for="">P<sub>04</sub></label>
+                    <input type="number" name="P_04" id="" step="any">
+                </div>
+                <div class="labelAndInput">
+                    <label for="">T<sub>04</sub></label>
+                    <input type="number" name="T_04" id="" step="any">
+                </div>
+            </div>
+        </div>
+        <h3>Assumptions Options</h3>
+        <div class="assumptions">
+            <div class="labelAndInput">
+                <label for="">Atmospheric Conditions at Compressor Inlet:</label>
+                <input type="checkbox" name="assumeAtmosphereIsCompressorInlet" id="" step="any">
+            </div>
+            <div class="labelAndInput">
+                <label for="">Isentropic Flow:</label>
+                <input type="checkbox" name="assumeIsentropicFlow" id="" step="any">
+            </div>
+        </div>
+        <button type="submit" id="calculateButton">Calculate</button>
+    </form>
+    <!-- <footer>
+        <h3>Made by <a href="https://www.linkedin.com/in/sagarshahuk/">Sagar Shah</a></h3>
+    </footer> -->
+    <script src="js/gasGenerator.js"></script>
+</body>
+
+</html>
