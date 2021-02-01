@@ -1,1 +1,0 @@
-# Aerospace-Gas-Generator-Calculator
